@@ -1,2 +1,6 @@
-venv/
+**/.vscode/
+**/venv/
 **/__pycache__/
+*.sqlite3
+mongoengine/files/
+sqlalchemy/files/

@@ -30,7 +30,7 @@ async def upload_file(file: UploadFile = File(...), folder: str = Form('')):
 		raise e
 
 @router.get('/stream')
-def stream(filename: str, folder: str = '', range: str = Header('bytes=0')):
+def stream(filename: str, folder: str = '', range: str = Header('bytes=0-')):
 	CONTENT_CHUNK_SIZE = 1024 * 14 # feel free to play around with this number to maximize efficiency
 	try:
 		def get_stream_and_size_and_mimetype(filename: str, folder: str):
